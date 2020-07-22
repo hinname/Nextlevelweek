@@ -1,0 +1,133 @@
+aula 01 -
+n se importe com as tecnologias
+elas vem com oq vc quer fazer
+
+
+foco
+pratica
+grupo, networking
+
+API restful -api nos padrões rest
+
+
+backend -> regras de negocio -> conexão com banco de dados -> conexão com serviços externos -> Autneticação e autorização dos usuarios -> Criptografia e segurança
+MVC (model/view/controller) -> template engine (retornar html do backend)
+REST -> retorna apenas os dados dos usuarios (JSON)
+
+frontend -> trabalham os dados em json e cria todo html
+
+
+typescript
+ajudar no formato da variavel pois JS é fracamente tipada
+
+mitos e verdades
+typescript diminui produtividade (+ ou -)
+typescript transforma javascript em java ou C# (falso)
+o mercado não usa typescript
+
+express para rotas
+npm install express
+
+quando site for entrar no ar, o codigo typescript sera convertido em JS
+
+node não entende TS, para isso, baixe ts-node
+
+npm run dev para inicar servidor
+
+
+frontend ->
+
+ReactJS e SPA (simple page applications, sem recarregar a tela)
+tudo fica no JS 
+
+vantagens do react
+- organização do código
+	- componentização
+
+- Divisão de responsabilidades
+- uma API, multiplos clientes
+
+mesmo backend para web e mobile
+
+ReactNative
+
+abordagem nativa
+
+abordagem React native
+nenhum codigo é convertido, ele é entendido pelo mobile atraves do javascript core
+
+PQ expo?
+sem ele precisa-se do sdk do android e Xcode. para usar recursos nativos 
+
+instalando expo, o app roda por cima desse app trazendo os recursos nativos
+
+
+
+
+
+----------------------------------------------------------------------------------------------------
+aula 02 
+
+networking e markting pessoal
+faça as oportunidades te encontrar
+
+rotas e recursos
+rota: localhost:3333/users
+recurso: users
+
+métodos http
+GET (unica requisição do navegador): Buscar uma ou mais informações do back-end
+POST: Criar uma nova informação no back-end
+PUT: Atualizar uma informação existente no back-end
+DELETE: Remover uma informação do back-end
+
+POST localhost:3333/users = criar um usuário
+GET localhost:3333/users = Listar usuários
+GET localhost:3333/users/5 = Buscar dados dos usuário pelo ID
+rotas são semânticas, n fazem diferença real
+
+
+paramêtros
+Request param: paramêtros que vem na própria rota que identificam um recurso
+ex: buscar um unico usuario
+Query param: paramêtros não obrigatórios que ficam na rota
+ex: filtrar lista de usuários
+Request Body: paramêtros para criação/atualização de informações
+
+Banco de dados
+SQL: POSTGRES, mYSQL, sqlite, sql server --usado
+noSQL: MongoDB, CouchDB
+
+KNEXjs usando sql com javascript
+migrations = historico do banco de dados (controle de versão)
+
+tabelas: points (pontos de coleta)
+		image
+		name
+		email
+		whatsapp
+		latitude
+		longitude
+		city
+		UF
+	 items (items para coleta)
+		title
+		image
+	 point_items (Relacionamento dos itens que um ponto coleta)
+		point_id
+		item_id
+relacionamento de muitos para muitos (n-n) (pivot)
+
+Funcionalidades da aplicação:
+web: 
+	- cadastro de ponto de coleta
+	- listar os itens de coleta
+mobile:
+	-Listar pontos (filtro por estado/cidade/items)
+	-listar ponto de coleta especifica
+
+
+serialized items = deixar os itens mais acessiveis para o front-end
+
+Cross-origin resource sharing - CORS - define quais URls podem acessar API
+
